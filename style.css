@@ -7,3 +7,43 @@
 #h3{
     font-family: sans-serif;
 }
+
+#nav {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #1D8DB0;
+}
+
+li {
+    float: left;
+    display: inline-block;
+    font-style: normal;
+    font-variant: small-caps;
+    color: white;
+    font-family: tahoma;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 1%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    padding: 1;
+    border: 1;
+    margin: 1;
+    float: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
