@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Student Services by Student Unions KU Leuven</name>
+    <description>On this map, you can find all the fakbars and Cours Services of the Student Unions of KU Leuven - Campus Leuven. </description>
+    <Style id="icon-503-009D57-normal">
+      <IconStyle>
+        <color>ff579d00</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-009D57-highlight">
+      <IconStyle>
+        <color>ff579d00</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-009D57">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-009D57-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-009D57-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-0BA9CC-normal">
+      <IconStyle>
+        <color>ffcca90b</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-0BA9CC-highlight">
+      <IconStyle>
+        <color>ffcca90b</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-0BA9CC">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-0BA9CC-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-0BA9CC-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-3F5BA9-normal">
+      <IconStyle>
+        <color>ffa95b3f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-3F5BA9-highlight">
+      <IconStyle>
+        <color>ffa95b3f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-3F5BA9">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-3F5BA9-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-3F5BA9-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-62AF44-normal">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-62AF44-highlight">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-62AF44">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-62AF44-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-62AF44-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-795046-normal">
+      <IconStyle>
+        <color>ff465079</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-795046-highlight">
+      <IconStyle>
+        <color>ff465079</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-795046">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-795046-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-795046-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-7CCFA9-normal">
+      <IconStyle>
+        <color>ffa9cf7c</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-7CCFA9-highlight">
+      <IconStyle>
+        <color>ffa9cf7c</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-7CCFA9">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-7CCFA9-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-7CCFA9-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-93D7E8-normal">
+      <IconStyle>
+        <color>ffe8d793</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-93D7E8-highlight">
+      <IconStyle>
+        <color>ffe8d793</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-93D7E8">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-93D7E8-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-93D7E8-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-9FC3FF-normal">
+      <IconStyle>
+        <color>ffffc39f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-9FC3FF-highlight">
+      <IconStyle>
+        <color>ffffc39f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-9FC3FF">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-9FC3FF-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-9FC3FF-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-C6A4CF-normal">
+      <IconStyle>
+        <color>ffcfa4c6</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-C6A4CF-highlight">
+      <IconStyle>
+        <color>ffcfa4c6</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-C6A4CF">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-C6A4CF-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-C6A4CF-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-CDDC39-normal">
+      <IconStyle>
+        <color>ff39dccd</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-CDDC39-highlight">
+      <IconStyle>
+        <color>ff39dccd</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-CDDC39">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-CDDC39-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-CDDC39-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-E6EEA3-normal">
+      <IconStyle>
+        <color>ffa3eee6</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-E6EEA3-highlight">
+      <IconStyle>
+        <color>ffa3eee6</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-E6EEA3">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-E6EEA3-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-E6EEA3-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-EE9C96-normal">
+      <IconStyle>
+        <color>ff969cee</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-EE9C96-highlight">
+      <IconStyle>
+        <color>ff969cee</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-EE9C96">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-EE9C96-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-EE9C96-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-F4EB37-normal">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-F4EB37-highlight">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-F4EB37">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-F4EB37-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-F4EB37-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-F9F7A6-normal">
+      <IconStyle>
+        <color>ffa6f7f9</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-F9F7A6-highlight">
+      <IconStyle>
+        <color>ffa6f7f9</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-F9F7A6">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-F9F7A6-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-F9F7A6-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-0-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-0-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-1-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|FF6100|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-1-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|FF6100|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-10-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=K|0031FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-10-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=K|0031FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-10">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-10-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-10-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-11-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=L|3100FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-11-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=L|3100FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-11">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-11-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-11-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-12-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=M|9200FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-12-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=M|9200FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-12">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-12-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-12-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-13-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=N|F300FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-13-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=N|F300FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-13">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-13-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-13-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-2-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=C|FFC200|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-2-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=C|FFC200|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-2">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-2-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-2-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-3-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=D|DBFF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-3-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=D|DBFF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-3">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-3-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-3-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-4-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=E|79FF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-4-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=E|79FF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-4">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-4-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-4-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-5-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=F|18FF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-5-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=F|18FF00|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-5">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-5-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-5-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-6-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=G|00FF49|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-6-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=G|00FF49|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-6">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-6-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-6-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-7-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=H|00FFAA|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-7-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=H|00FFAA|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-8-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=I|00F3FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-8-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=I|00F3FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-8">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-8-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-8-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-seq-1-9-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=J|0092FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-seq-1-9-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href><![CDATA[http://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=J|0092FF|000000]]></href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-seq-1-9">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-seq-1-9-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-seq-1-9-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Fakbars</name>
+      <Placemark>
+        <name>Dulci</name>
+        <description>Fakbar for Business and Economics</description>
+        <styleUrl>#icon-503-F9F7A6</styleUrl>
+        <Point>
+          <coordinates>
+            4.70625900000005,50.876678,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Doc's Bar]]></name>
+        <description>Fakbar for Medicine and Biomedical Sciences</description>
+        <styleUrl>#icon-503-93D7E8</styleUrl>
+        <Point>
+          <coordinates>
+            4.68849899999998,50.882009,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA['t Elixir]]></name>
+        <description>Fakbar for Engineering Science</description>
+        <styleUrl>#icon-503-C6A4CF</styleUrl>
+        <Point>
+          <coordinates>
+            4.69539473804605,50.8698441850672,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fak Letteren</name>
+        <description>Fakbar for Arts</description>
+        <styleUrl>#icon-503-F4EB37</styleUrl>
+        <Point>
+          <coordinates>
+            4.70810200000005,50.8773,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gnorgl</name>
+        <description>Fakbar for Bioscience Engineering</description>
+        <styleUrl>#icon-503-3F5BA9</styleUrl>
+        <Point>
+          <coordinates>
+            4.69369949999998,50.8641081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Huis der Rechten</name>
+        <description>Fakbar for Law</description>
+        <styleUrl>#icon-503-0BA9CC</styleUrl>
+        <Point>
+          <coordinates>
+            4.70471399999997,50.87722,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Politika Kaffee</name>
+        <description>Fakbar for Social Sciences</description>
+        <styleUrl>#icon-503-795046</styleUrl>
+        <Point>
+          <coordinates>
+            4.70484599999998,50.877245,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sportzak</name>
+        <description>Fakbar for Kinesiology and Rehabilitation Sciences</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            4.69550470861566,50.8700011826946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>M Café (on Tuesday)</name>
+        <description>Fakbar for Philosophy and Theology</description>
+        <styleUrl>#icon-503-EE9C96</styleUrl>
+        <Point>
+          <coordinates>
+            4.7040796,50.8790878,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Maxim'O]]></name>
+        <description>Fakbar for Criminology</description>
+        <styleUrl>#icon-503-E6EEA3</styleUrl>
+        <Point>
+          <coordinates>
+            4.70054920000007,50.8772839,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fakbar Délibéré</name>
+        <description>Fakbar for Engineering Technology</description>
+        <styleUrl>#icon-503-7CCFA9</styleUrl>
+        <Point>
+          <coordinates>
+            4.709112,50.875397,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pavlov</name>
+        <description>Fakbar for Psychology and Educational Sciences</description>
+        <styleUrl>#icon-503-CDDC39</styleUrl>
+        <Point>
+          <coordinates>
+            4.70463500000005,50.877283,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Winabar (Only on Wednesdays)</name>
+        <description>Fakbar for Maths, Physics and Computer Sciences</description>
+        <styleUrl>#icon-503-9FC3FF</styleUrl>
+        <Point>
+          <coordinates>
+            4.68525052070618,50.8675385290448,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA['t Archief - Fak Apollonia (On Tuesday, every two weeks)]]></name>
+        <description>Fakbar for Dentistry: calendar www.apollonialeuven.be</description>
+        <styleUrl>#icon-503-009D57</styleUrl>
+        <Point>
+          <coordinates>
+            4.69979939999996,50.8784081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Den Bijsluiter</name>
+        <description>Fakbar for Pharmacy</description>
+        <styleUrl>#icon-503-62AF44</styleUrl>
+        <Point>
+          <coordinates>
+            4.69369979999999,50.8806406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Cudi/KD (Course Service)</name>
+      <Placemark>
+        <name>Cudi Babylon (Arts - Linguistics and Literature )</name>
+        <description>In the cellar of Erasmushuis. Opening hours: Cursusdienst Babylon Facebook group - In the Erasmushuis/MSI - cursusdienst@kringbabylon.be</description>
+        <styleUrl>#icon-seq-1-0</styleUrl>
+        <Point>
+          <coordinates>
+            4.70957950000002,50.8773267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>KD Industria (Engineering Technology)</name>
+        <description><![CDATA[SALES FIRST WEEK:  in the atrium near the cafeteria of GroupT, Campus Vesalius. SALES REST OF THE YEAR: You go into the elevator, push the button labeled '-2' and go to a little corner in the garage with a bright light, and there is the KD!      Website:http://www.industria.be/kd/]]></description>
+        <styleUrl>#icon-seq-1-1</styleUrl>
+        <Point>
+          <coordinates>
+            4.70736349999993,50.8748911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Apolloon (Kinesiology and Rehabilitation Sciences)</name>
+        <description>At alma 3. You can take the side entrance at the left. You will find our secretary directly at the left.</description>
+        <styleUrl>#icon-seq-1-2</styleUrl>
+        <Point>
+          <coordinates>
+            4.68508872669759,50.867534972756,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Alfa, Eoos, Historia, Mecenas and Musicologica (Arts, except Linguistics and Literature.</name>
+        <description>In the upper floors of Fak Letteren. </description>
+        <styleUrl>#icon-seq-1-3</styleUrl>
+        <Point>
+          <coordinates>
+            4.70803620000004,50.8772297,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi VTK (Engineering Science)</name>
+        <description><![CDATA[Theokot, Ground floor TTI/next to BOKU. Check the map for more details: http://cwisdb.kuleuven.be/kaarten-bin/basiskaart.pl?kaartnr=2004&sf=1&cor=?214,163     Website: http://www.vtk.be/en/page/name/cursusdienst/]]></description>
+        <styleUrl>#icon-seq-1-4</styleUrl>
+        <Point>
+          <coordinates>
+            4.68358926529004,50.8612273832723,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Scientica (Science)</name>
+        <description>Scientica Cursusdienst, Celestijnenlaan 200L 00.03, Campus Arenberg III, 3001Heverlee | Website: http://cudi.scientica.be/?language=en</description>
+        <styleUrl>#icon-seq-1-5</styleUrl>
+        <Point>
+          <coordinates>
+            4.67954277992249,50.8633368513856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Psychology and Educational Sciences</name>
+        <description><![CDATA[VHI - Blok B, When entering B blok just keep walking straight ahead. It's on the right side of the staircase.  Order books beforehand via: http://www.cudippw.be/?language=en]]></description>
+        <styleUrl>#icon-seq-1-6</styleUrl>
+        <Point>
+          <coordinates>
+            4.70761111209481,50.874575770462,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi VRG (Law)</name>
+        <description><![CDATA[When you enter 'de Nieuwe Valk' ( aka DV3, this is at the Faculty of Law, Tiensestraat 41), just walk straight through the main hall. The VRG-Book Service is located in the last room on your right, (room 00.20), on the other side of the Alma restaurant. Website: http://www.vrg.be/en/Book-Service/]]></description>
+        <styleUrl>#icon-seq-1-7</styleUrl>
+        <Point>
+          <coordinates>
+            4.70551434994582,50.8775817142911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>KD Ekonomika (economics and business)</name>
+        <description>In the basement. Watch this movie to find your way: http://www.youtube.com/watch?v=V7u17rGPB9w . More info: www.ekonomika.be</description>
+        <styleUrl>#icon-seq-1-8</styleUrl>
+        <Point>
+          <coordinates>
+            4.70821839999996,50.8742825,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Medica (Medicine and Biomedical Sciences)</name>
+        <description>Site: medica-csd.be Contact: cursusdienst@medica.be</description>
+        <styleUrl>#icon-seq-1-9</styleUrl>
+        <Point>
+          <coordinates>
+            4.68849899999998,50.882009,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Apollonia (Dentistry)</name>
+        <description>In the basement of St. Raphael Hospital, in the XLounge: Take the entrance at the intersection of Kapucijnenvoer/Brusselsestraatand go to the left immediately. Walk up the steps and go to the right to the staircase.Go down until the stairs end and then go straight forward (through a kind ofhallway), until you see a staircase and an elevator on your left. Go to theleft and at your right side there is the XLounge with the cudi. For openinghours and orders:  http://www.apollonialeuven.be/ (Tab Cudi, info only in Dutch)</description>
+        <styleUrl>#icon-seq-1-10</styleUrl>
+        <Point>
+          <coordinates>
+            4.69352245330811,50.8803071376624,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi LBK (Bioscience Engineering)</name>
+        <description><![CDATA[In the basement of Bioscience Engineering. How to get there: The faculty is located in the park surrounding the Arenberg Castle in Heverlee. From the castle entrance, Follow the river downstream for about 200 meters. Then go right passing the bicycle parking. On your left, you should notice a large brick building. This is the faculty of bioscience engineering. To reach the 'cursusdienst' go through the double, brown door (the one without steps). Then go to the right, pass another door and take a left. You have arrived! Opening hours can be found on cudi.landbouwkring.be]]></description>
+        <styleUrl>#icon-seq-1-11</styleUrl>
+        <Point>
+          <coordinates>
+            4.68759690000002,50.8635476,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi NFK (Philosophy)</name>
+        <description>At the Higher Institute of Philosophy. Walk through the iron gate and walk straight forward until you reach stairs that go down. From here on you will find sign posts going to the Cudi. </description>
+        <styleUrl>#icon-seq-1-12</styleUrl>
+        <Point>
+          <coordinates>
+            4.7066691,50.8762227,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cudi Politika (Social Sciences)</name>
+        <description><![CDATA[You can find Politika’s Course service at the second floor of the main faculty building, that’s the big one with the poem on it. Just take the elevator to the second floor and follow the arrows that say “Politika Cursusdienst” You can also check the site for more info: http://www.politika.be/politika/cudi/?lang=en Parkstraat 45 3000 Leuven"Politika – Cursusdienstwww.politika.be]]></description>
+        <styleUrl>#icon-seq-1-13</styleUrl>
+        <Point>
+          <coordinates>
+            4.70292089999998,50.8734832,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
