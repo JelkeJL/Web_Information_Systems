@@ -27,7 +27,7 @@ h2{
     background-color: #1D8DB0;
 }
 
-li {
+#nav li {
     float: left;
     display: inline-block;
     font-style: normal;
