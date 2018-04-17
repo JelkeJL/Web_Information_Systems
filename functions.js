@@ -16,6 +16,8 @@
 //     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZHYymzYflI1c7mbhFTcsb6NN4ss7LBwU&callback=initMap"
 // });
 
+
+var map, infoWindow;
 function initMap() {
     var ArenbergIII = {lat: 50.863002, lng: 4.678974};
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,6 +29,8 @@ function initMap() {
         map: map
     });
 }
+        infoWindow = new google.maps.InfoWindow;
+
 
 if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
