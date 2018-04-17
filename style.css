@@ -15,6 +15,12 @@ h1{
 
 }
 
+h2{
+    font-family: sans-serif;
+    color: #00407A;
+    font-size: 15px;
+}
+
 #nav {
     list-style-type: none;
     overflow: hidden;
