@@ -19,6 +19,7 @@ h2{
     font-family: sans-serif;
     color: #00407A;
     font-size: 15px;
+    float: center;
 }
 
 #nav {
@@ -47,7 +48,7 @@ h2{
     text-align: left;
 }
 
-img {
+#nav img {
     width: 150px;
     height: auto;
     padding: 1;
@@ -72,6 +73,26 @@ a:hover{
 
 a:active{
     text-decoration: underline;
+}
+
+#students img {
+    border-radius: 50%;
+    border-color: #ffffd4d;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+    border-style: solid;
+    float: left top;
+    position: relative;
+}
+
+#students p{
+    float: right;
+    width: 83%;
+}
+
+#students {
+    padding: 5px;
 }
 
 p {
