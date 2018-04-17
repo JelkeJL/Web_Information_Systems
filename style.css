@@ -39,12 +39,12 @@ h2{
     padding: 10px 1%;
 }
 
-ul {
+#nav ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
 }
 
 img {
