@@ -50,7 +50,11 @@ img {
     float: left;
 }
 
-a {
+#nav a {
     color: white;
     text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
