@@ -8,6 +8,13 @@
     font-family: sans-serif;
 }
 
+#h1{
+    font-family: sans-serif;
+    color: #1D8DB0;
+    font-size: 20px;
+    
+}
+
 #nav {
     list-style-type: none;
     overflow: hidden;
