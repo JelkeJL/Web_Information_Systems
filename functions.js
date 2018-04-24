@@ -58,9 +58,9 @@ var map, infoWindow;
 
           var image = {
             url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
-            scaledSize: new google.maps.Size(50, 50), // scaled size
+            scaledSize: new google.maps.Size(40, 40), // scaled size
             origin: new google.maps.Point(0,0), // origin
-            anchor: new google.maps.Point(0, 0) // anchor
+            anchor: new google.maps.Point(0, 0), // anchor
           }
           var marker = new google.maps.Marker({
             position: pos,
