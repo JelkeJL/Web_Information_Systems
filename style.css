@@ -28,6 +28,14 @@ h2{
     background-color: #1D8DB0;
 }
 
+#info {
+    padding: 10px;
+    border: 10px auto;
+    float: center;
+    background-color: lightgrey;
+    margin: 50px;
+}
+
 #nav li {
     float: left;
     display: inline-block;
