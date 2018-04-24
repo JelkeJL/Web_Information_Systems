@@ -37,6 +37,10 @@ var map, infoWindow;
           zoom: 15
         });
         infoWindow = new google.maps.InfoWindow;
+        //var image = 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png'
+        //walk = new google.maps.Marker({
+          //icon: image
+        //});
 
 // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -46,9 +50,9 @@ var map, infoWindow;
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('You are here.');
-            infoWindow.open(map);
+           infoWindow.setPosition(pos);
+           infoWindow.setContent('You are here.');
+           infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
