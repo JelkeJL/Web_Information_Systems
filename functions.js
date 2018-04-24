@@ -37,6 +37,7 @@ var map, infoWindow;
           zoom: 15
         });
         infoWindow = new google.maps.InfoWindow;
+        
         //var image = 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png'
         //walk = new google.maps.Marker({
           //icon: image
@@ -54,6 +55,19 @@ var map, infoWindow;
            infoWindow.setContent('You are here.');
            infoWindow.open(map);
             map.setCenter(pos);
+
+          var image = {
+            url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
+            scaledSize: new google.maps.Size(50, 50), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+          }
+          var marker = new google.maps.Marker({
+            position: pos,
+            map:map,
+            icon: image,
+          });
+
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -61,6 +75,8 @@ var map, infoWindow;
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+
+
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -68,5 +84,6 @@ var map, infoWindow;
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
+        infoWindow.open(map,marker);
       }
+
