@@ -118,3 +118,17 @@ ul {
     font-size: 13px;
 }
 
+.pics {
+    height: 300px;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+}
+.pics img {
+    padding: 5%;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    width: 90%;
+    top: 0;
+    left: 0
+}

@@ -29,7 +29,15 @@
 }
 **/
 
+$(document).ready(function(){
+
+    $(".pics").cycle('fade');
+
+});
+
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
+
+
 var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -37,7 +45,7 @@ var map, infoWindow;
           zoom: 15
         });
         infoWindow = new google.maps.InfoWindow;
-        
+
         //var image = 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png'
         //walk = new google.maps.Marker({
           //icon: image
@@ -86,4 +94,3 @@ var map, infoWindow;
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map,marker);
       }
-
