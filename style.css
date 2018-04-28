@@ -32,8 +32,8 @@ h2{
     padding: 10px;
     border: 10px auto;
     float: center;
-    background-color: lightgrey;
-    margin: 50px;
+    background-color: #f2f2f2;
+    margin: 15px;
 }
 
 #nav li {
@@ -118,13 +118,18 @@ ul {
     font-size: 13px;
 }
 
-.pics {
+/* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
+
+
+
+/*
+#pics {
     height: 300px;
     width: 400px;
     padding: 0;
     margin: 0;
 }
-.pics img {
+#pics img {
     padding: 5%;
     border: 1px solid #ccc;
     background-color: #eee;
@@ -132,3 +137,4 @@ ul {
     top: 0;
     left: 0
 }
+*/

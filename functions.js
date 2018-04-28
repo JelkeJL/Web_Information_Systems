@@ -94,3 +94,5 @@ var map, infoWindow;
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map,marker);
       }
+
+// for displaying the images
