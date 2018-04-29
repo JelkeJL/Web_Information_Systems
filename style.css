@@ -120,7 +120,21 @@ ul {
 
 /* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
 
+.pics {
+    height: 300px;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+}
 
+.pics img {
+    padding: 5%;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    width: 90%;
+    top: 0;
+    left: 0
+}
 
 /*
 #pics {

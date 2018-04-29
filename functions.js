@@ -96,3 +96,5 @@ var map, infoWindow;
       }
 
 // for displaying the images
+
+$(".pics").cycle('fade');
