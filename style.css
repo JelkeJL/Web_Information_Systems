@@ -118,37 +118,28 @@ ul {
     font-size: 13px;
 }
 
+/* this is where I try to position two text blocks for fakbar text to each other*/
+
+
+
+
 /* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
 
 .pics {
-    height: 300px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
 
 .pics img {
-    padding: 5%;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    width: 90%;
+    width: 100%;
     top: 0;
     left: 0
 }
 
-/*
-#pics {
-    height: 300px;
-    width: 400px;
-    padding: 0;
-    margin: 0;
+div.pics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
-#pics img {
-    padding: 5%;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    width: 90%;
-    top: 0;
-    left: 0
-}
-*/
