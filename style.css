@@ -118,6 +118,10 @@ ul {
     font-size: 13px;
 }
 
+footer {
+   display: block;
+}
+
 /* this is where I try to position two text blocks for fakbar text to each other*/
 
 
@@ -142,4 +146,14 @@ div.pics {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+.footer {
+    bottom: 0;
+    color: #707070;
+    height: 2em;
+    left: 0;
+    position: relative;
+    font-size: small;
+    width:100%;
 }
