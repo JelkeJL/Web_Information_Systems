@@ -151,9 +151,10 @@ div.pics {
 .footer {
     bottom: 0;
     color: #707070;
-    height: 2em;
+    padding: 10px;
+    height: 6em;
     left: 0;
-    position: relative;
+    position: fixed;
     font-size: small;
     width:100%;
 }
