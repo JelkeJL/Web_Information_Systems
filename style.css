@@ -179,7 +179,7 @@ div.pics {
 /* this is where we style the footer */
 footer {
     padding: 0.75em;
-    color: black;
+    color: grey;
     background-color: white;
     clear: left;
     text-align: center;
