@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 #map {
     width: 100%;
     height: 400px;
@@ -32,6 +37,11 @@ h2{
     list-style-type: none;
     overflow: hidden;
     background-color: #1D8DB0;
+    top:0;
+    position: fixed;
+    height: 100px;
+    width:100%;
+    z-index: 999;
 }
 
 #nav li {
@@ -40,17 +50,24 @@ h2{
     font-style: normal;
     color: white;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    padding: 10px 1%;
+    padding: 0px 1%;
+    margin: 20px 0 0;
+    overflow: visible;
+}
+
+#nav li:first-of-type {
+    margin: 4px 0 0;
 }
 
 #nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     text-align: right;
+    margin: 10px auto;
+    position: relative;
 }
 
 #nav img {
@@ -60,6 +77,8 @@ h2{
     border: 1;
     margin: 1;
     float: left;
+    vertical-align: middle;
+    overflow: visible;
 }
 
 #nav a {
@@ -88,7 +107,7 @@ a:active{
     border: 10px auto;
     float: center;
     background-color: #f2f2f2;
-    margin: 15px;
+    margin: 110px 10px 10px;
 }
 
 #students img {
