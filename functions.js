@@ -29,6 +29,11 @@
 }
 **/
 
+/* load geodata */
+
+
+/* slide show */
+
 $(document).ready(function(){
 
     $(".pics").cycle('fade');
