@@ -26,6 +26,8 @@ h2{
     float: center;
 }
 
+/* this is where we make the nav bar */
+
 #nav {
     list-style-type: none;
     overflow: hidden;
@@ -64,6 +66,9 @@ h2{
     color: white;
     text-decoration: none;
 }
+
+
+/* end of nav bar styling */
 
 p a{
     color: #1D8DB0;
