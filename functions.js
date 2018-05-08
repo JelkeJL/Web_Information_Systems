@@ -109,11 +109,25 @@ $(document).ready(function() {
 
   $('#group').bind('change', function (e) { 
     //console.log("change");
-    if($('#group').val() == 'humanities') {
-      $('#faculties_humanities').show();
+    if ($('#group').val() == 'empty'){
+      $('#faculty_biomedical').hide();
+      
+      $('#faculties_humanities').hide();
+      $('#faculties_science').hide();
+    }
+    else if($('#group').val() == 'humanities') {
       
       $('#faculties_science').hide();
       $('#faculty_biomedical').hide();
+      $('#faculties_humanities').show();
+      $('#fac_hum').bind('change', function (e){
+        if ($('#fac_hum').val() != 'arts'){
+          $('#degrees_arts').hide();
+        }
+        else if ($('#fac_hum').val() == 'arts'){
+          $('#degrees_arts').show();
+        }
+      }).trigger('change');
     }
     else if( $('#group').val() == 'science') {
       $('#faculties_science').show();
@@ -127,6 +141,7 @@ $(document).ready(function() {
       $('#faculties_humanities').hide();
       $('#faculties_science').hide();
     }
+
   }).trigger('change');
 
 
