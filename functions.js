@@ -32,7 +32,7 @@
 /* load geodata */
 
 
-/* slide show */
+
 
 
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
@@ -51,7 +51,7 @@ var map, infoWindow;
           //icon: image
         //});
 
-// Try HTML5 geolocation.
+// Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -95,25 +95,31 @@ var map, infoWindow;
         infoWindow.open(map,marker);
       }
 
-// for displaying the images
-
-//$(".pics").cycle('fade');
-
-//var elem = document.getElementById("group");
-//elem.onchange = function(){
-//    var hiddenDiv = document.getElementById("faculties_humanities");
-//    hiddenDiv.style.display = (this.value == "humanities") ? "none":"block";
-//};
+//http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
 
 $(document).ready(function() {
 
   $('#group').bind('change', function (e) { 
     //console.log("change");
-    if($('#group').val() == 'humanities') {
-      $('#faculties_humanities').show();
+    if ($('#group').val() == 'empty'){
+      $('#faculty_biomedical').hide();
+      
+      $('#faculties_humanities').hide();
+      $('#faculties_science').hide();
+    }
+    else if($('#group').val() == 'humanities') {
       
       $('#faculties_science').hide();
       $('#faculty_biomedical').hide();
+      $('#faculties_humanities').show();
+      $('#fac_hum').bind('change', function (e){
+        if ($('#fac_hum').val() != 'arts'){
+          $('#degrees_arts').hide();
+        }
+        else if ($('#fac_hum').val() == 'arts'){
+          $('#degrees_arts').show();
+        }
+      }).trigger('change');
     }
     else if( $('#group').val() == 'science') {
       $('#faculties_science').show();
@@ -127,6 +133,7 @@ $(document).ready(function() {
       $('#faculties_humanities').hide();
       $('#faculties_science').hide();
     }
+
   }).trigger('change');
 
 
