@@ -32,7 +32,7 @@
 /* load geodata */
 
 
-/* slide show */
+
 
 
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
@@ -51,7 +51,7 @@ var map, infoWindow;
           //icon: image
         //});
 
-// Try HTML5 geolocation.
+// Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -95,15 +95,7 @@ var map, infoWindow;
         infoWindow.open(map,marker);
       }
 
-// for displaying the images
-
-//$(".pics").cycle('fade');
-
-//var elem = document.getElementById("group");
-//elem.onchange = function(){
-//    var hiddenDiv = document.getElementById("faculties_humanities");
-//    hiddenDiv.style.display = (this.value == "humanities") ? "none":"block";
-//};
+//http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
 
 $(document).ready(function() {
 
