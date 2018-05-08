@@ -187,7 +187,6 @@ footer {
     float: right;
 }
 
-<<<<<<< HEAD
 #faculties_humanities{
     display:none;
 }
@@ -202,7 +201,8 @@ footer {
 
 #degrees_arts {
     display:none;
-=======
+}
+
 #narrow {
   width: 40%;
   background: #f2f2f2;
@@ -230,7 +230,6 @@ footer {
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     text-align: center;
->>>>>>> origin/master
 }
 
 .cudipics {
