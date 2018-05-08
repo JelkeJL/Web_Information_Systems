@@ -106,6 +106,8 @@ $(document).ready(function() {
       
       $('#faculties_humanities').hide();
       $('#faculties_science').hide();
+
+      $('#degrees_arts').hide();
     }
     else if($('#group').val() == 'humanities') {
       
