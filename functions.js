@@ -34,21 +34,7 @@
 
 /* slide show */
 
-<<<<<<< HEAD
-=======
-$(document).ready(function(){
 
-    $(".pics").cycle('fade');
-
-});
-
-$(document).ready(function(){
-
-    $(".cudipics").cycle('fade');
-
-});
-
->>>>>>> origin/master
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
 
 
