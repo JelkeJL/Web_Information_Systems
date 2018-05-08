@@ -39,7 +39,7 @@ h2{
     background-color: #1D8DB0;
     top:0;
     position: fixed;
-    height: 100px;
+    height: 83px;
     width:100%;
     z-index: 999;
 }
@@ -207,16 +207,24 @@ footer {
   width: 40%;
   background: #f2f2f2;
   padding: 0.75em;
-  margin: 130px 10px 10px;
-  float: left;
+}
+
+.mid {
+    margin-top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+#wide p, #narrow p{
+    font-size: 15px;
 }
 
 #wide {
-  width: 30%;
+  width: 40%;
   background: #f2f2f2;
   padding: 0.75em;
-  margin: 130px 30px 10px;
-  float: left;
 }
 
 #button_fakbar {
@@ -224,12 +232,12 @@ footer {
     background: #1D8DB0;
     padding: 0.75em;
     margin: 30px;
-    float: left;
     font-style: normal;
     color: white;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 .cudipics {
