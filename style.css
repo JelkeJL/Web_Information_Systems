@@ -191,7 +191,7 @@ footer {
   width: 40%;
   background: #f2f2f2;
   padding: 0.75em;
-  margin: 30px;
+  margin: 130px 10px 10px;
   float: left;
 }
 
@@ -199,7 +199,7 @@ footer {
   width: 30%;
   background: #f2f2f2;
   padding: 0.75em;
-  margin: 30px;
+  margin: 130px 30px 10px;
   float: left;
 }
 
@@ -214,4 +214,9 @@ footer {
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     text-align: center;
+}
+
+.cudipics {
+    width: 100%;
+    float: left;
 }
