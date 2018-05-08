@@ -147,30 +147,24 @@ ul {
     font-size: 13px;
 }
 
-
-
-
 /* this is where I try to position two text blocks for fakbar text to each other*/
-
-
-
 
 /* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
 
-.pics {
+.pics, .cudipics {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.pics img {
+.pics, .cudipics img {
     width: 100%;
     top: 0;
     left: 0
 }
 
-div.pics {
+div.pics, div.cudipics {
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -191,4 +185,33 @@ footer {
 
 .github {
     float: right;
+}
+
+#narrow {
+  width: 40%;
+  background: #f2f2f2;
+  padding: 0.75em;
+  margin: 30px;
+  float: left;
+}
+
+#wide {
+  width: 30%;
+  background: #f2f2f2;
+  padding: 0.75em;
+  margin: 30px;
+  float: left;
+}
+
+#button_fakbar {
+    width: 50%;
+    background: #1D8DB0;
+    padding: 0.75em;
+    margin: 30px;
+    float: left;
+    font-style: normal;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-align: center;
 }

@@ -40,6 +40,12 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+
+    $(".cudipics").cycle('fade');
+
+});
+
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
 
 
