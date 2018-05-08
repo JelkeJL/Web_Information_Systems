@@ -236,9 +236,11 @@ footer {
 }
 
 #button_fakbar {
-    width: 50%;
-    background: #1D8DB0;
-    padding: 0.75em;
+    border-radius: 10px;
+    width: 20%;
+    background-color: #52BDEC;
+    box-shadow: 5px 5px #1D8DB0;
+    padding: 1.5em;
     margin: 30px;
     font-style: normal;
     color: white;
@@ -246,6 +248,12 @@ footer {
     text-decoration: none;
     justify-content: center;
     display: flex;
+}
+
+#button_fakbar:hover {
+    background-color: #1D8DB0;
+    box-shadow: 5px 5px #52BDEC;
+
 }
 
 .cudipics {
