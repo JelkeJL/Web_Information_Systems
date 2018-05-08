@@ -98,17 +98,22 @@ var map, infoWindow;
 //http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
 
 $(document).ready(function() {
+ //links to XML with fakbar and cudi data
 
-  $('#group').bind('change', function (e) { 
+/*
+go to example: https://www.w3schools.com/xml/xml_dom.asp
+*/
+
+  $('#group').bind('change', function (e) {
     //console.log("change");
     if ($('#group').val() == 'empty'){
       $('#faculty_biomedical').hide();
-      
+
       $('#faculties_humanities').hide();
       $('#faculties_science').hide();
     }
     else if($('#group').val() == 'humanities') {
-      
+
       $('#faculties_science').hide();
       $('#faculty_biomedical').hide();
       $('#faculties_humanities').show();
@@ -123,20 +128,16 @@ $(document).ready(function() {
     }
     else if( $('#group').val() == 'science') {
       $('#faculties_science').show();
-      
       $('#faculties_humanities').hide();
       $('#faculty_biomedical').hide();
     }
     else if( $('#group').val() == 'biomedical') {
       $('#faculty_biomedical').show();
-      
+
       $('#faculties_humanities').hide();
       $('#faculties_science').hide();
     }
 
   }).trigger('change');
-
-
-
 
 });
