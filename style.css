@@ -192,3 +192,19 @@ footer {
 .github {
     float: right;
 }
+
+#faculties_humanities{
+    display:none;
+}
+
+#faculties_science {
+    display:none;
+}
+
+#faculty_biomedical {
+    display:none;
+}
+
+#degrees_arts {
+    display:none;
+}
