@@ -34,17 +34,6 @@
 
 /* slide show */
 
-$(document).ready(function(){
-
-    $(".pics").cycle('fade');
-
-});
-
-$(document).ready(function(){
-
-    $(".cudipics").cycle('fade');
-
-});
 
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
 
@@ -108,4 +97,39 @@ var map, infoWindow;
 
 // for displaying the images
 
-$(".pics").cycle('fade');
+//$(".pics").cycle('fade');
+
+//var elem = document.getElementById("group");
+//elem.onchange = function(){
+//    var hiddenDiv = document.getElementById("faculties_humanities");
+//    hiddenDiv.style.display = (this.value == "humanities") ? "none":"block";
+//};
+
+$(document).ready(function() {
+
+  $('#group').bind('change', function (e) { 
+    //console.log("change");
+    if($('#group').val() == 'humanities') {
+      $('#faculties_humanities').show();
+      
+      $('#faculties_science').hide();
+      $('#faculty_biomedical').hide();
+    }
+    else if( $('#group').val() == 'science') {
+      $('#faculties_science').show();
+      
+      $('#faculties_humanities').hide();
+      $('#faculty_biomedical').hide();
+    }
+    else if( $('#group').val() == 'biomedical') {
+      $('#faculty_biomedical').show();
+      
+      $('#faculties_humanities').hide();
+      $('#faculties_science').hide();
+    }
+  }).trigger('change');
+
+
+
+
+});
