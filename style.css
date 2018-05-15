@@ -1,4 +1,4 @@
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ & https://css-tricks.com/snippets/css/complete-guide-grid/ */
+/* general styling */
 
 #overview {
     display: none;
@@ -21,7 +21,6 @@ h1{
     font-family: 'Lato', sans-serif;
     color: #1D8DB0;
     font-size: 20px;
-
 }
 
 h2{
@@ -31,13 +30,47 @@ h2{
     float: center;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+p a{
+    color: #1D8DB0;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+}
+
+ol {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+}
+
+ul {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+}
+
+
+
 /* dimensions of map */
+
 #map {
     width: 100%;
     height: 400px;
     background-color: lightgrey;
 }
-/* this is where we make the nav bar */
+
+
+
+/* nav bar */
 
 #nav {
     list-style-type: none;
@@ -93,20 +126,28 @@ h2{
 }
 
 
-/* end of nav bar styling */
 
-p a{
-    color: #1D8DB0;
-    text-decoration: none;
+/* home page */
+
+#faculties_humanities{
+    display:none;
 }
 
-a:hover{
-    text-decoration: underline;
+#faculties_science {
+    display:none;
 }
 
-a:active{
-    text-decoration: underline;
+#faculty_biomedical {
+    display:none;
 }
+
+#degrees_arts {
+    display:none;
+}
+
+
+
+/* about page */
 
 #info {
     padding: 10px;
@@ -138,24 +179,9 @@ a:active{
     padding: 5px;
 }
 
-p {
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-}
 
-ol {
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-}
 
-ul {
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-}
-
-/* this is where we try to position two text blocks for fakbar text to each other*/
-
-/* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
+/* pictures */
 
 .fakbarpics, .cudipics {
     height: 100%;
@@ -180,7 +206,11 @@ div.fakbarpics {
     margin-top: 83px;
 }
 
-/* this is where we style the footer */
+
+
+
+/* footer */
+
 footer {
     padding: 0.75em;
     color: grey;
@@ -197,21 +227,8 @@ footer {
     float: right;
 }
 
-#faculties_humanities{
-    display:none;
-}
 
-#faculties_science {
-    display:none;
-}
 
-#faculty_biomedical {
-    display:none;
-}
-
-#degrees_arts {
-    display:none;
-}
 
 /* cudi page styling */
 
@@ -242,6 +259,9 @@ footer {
   background: #f2f2f2;
   padding: 0.75em;
 }
+
+
+
 
 /* fak page styling */
 
@@ -274,7 +294,11 @@ footer {
   padding: 0.75em;
 }
 
-/* button styling */
+
+
+
+/* button */
+
 #button_fakbar {
     border-radius: 10px;
     width: 50%;
