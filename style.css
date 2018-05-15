@@ -176,6 +176,10 @@ div.fakbarpics, div.cudipics {
     margin-right: auto
 }
 
+div.fakbarpics {
+    margin-top: 83px;
+}
+
 /* this is where we style the footer */
 footer {
     padding: 0.75em;
@@ -230,7 +234,7 @@ footer {
 }
 
 #narrow ul{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #wide {
@@ -239,7 +243,55 @@ footer {
   padding: 0.75em;
 }
 
+/* fak page styling */
+
+#narrowfak {
+  width: 40%;
+  background: #f2f2f2;
+  padding: 0.75em;
+}
+
+.midfak {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+#widefak p, #narrowfak p{
+    font-size: 15px;
+}
+
+#narrowfak ul{
+    font-size: 15px;
+}
+
+#widefak {
+  width: 40%;
+  background: #f2f2f2;
+  padding: 0.75em;
+}
+
+/* button styling */
 #button_fakbar {
+    border-radius: 10px;
+    width: 50%;
+    background-color: #52BDEC;
+    box-shadow: 5px 5px #1D8DB0;
+    padding: 1.5em;
+    margin: 45px;
+    margin-left: 18%;
+    font-style: normal;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}
+
+#button_cudi {
     border-radius: 10px;
     width: 20%;
     background-color: #52BDEC;
@@ -255,8 +307,7 @@ footer {
     display: flex;
 }
 
-#button_fakbar:hover {
+#button_cudi:hover, #button_fakbar:hover {
     background-color: #1D8DB0;
     box-shadow: 5px 5px #52BDEC;
-
 }
