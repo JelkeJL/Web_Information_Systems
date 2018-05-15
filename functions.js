@@ -151,7 +151,22 @@ $(document).ready(function() {
 
   }).trigger('change');
 
-
-
-
 });
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "fakbar_new.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+  // console.log(xml.responseText);
+    var xmlDoc = xml.responseXML;
+    document.getElementById("overview_from_xml").innerHTML =
+    xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    //console.log(xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue)
+   $('#overview').show()
+}
