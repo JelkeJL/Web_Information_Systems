@@ -101,6 +101,7 @@ $(document).ready(function() {
 
   $('#group').bind('change', function (e) { 
     //console.log("change");
+    $('#overview').hide()
     if ($('#group').val() == 'empty'){
       $('#faculty_biomedical').hide();
       
@@ -117,9 +118,13 @@ $(document).ready(function() {
       $('#fac_hum').bind('change', function (e){
         if ($('#fac_hum').val() != 'arts'){
           $('#degrees_arts').hide();
+          if ($('#fac_hum').val() == 'economics'){
+            $('#overview').show();
+          }
         }
         else if ($('#fac_hum').val() == 'arts'){
           $('#degrees_arts').show();
+          
 /*
           $('#group').bind('change', function (e) {
               $('#degrees_arts').hide();
@@ -165,8 +170,11 @@ xhttp.send();
 function myFunction(xml) {
   // console.log(xml.responseText);
     var xmlDoc = xml.responseXML;
-    document.getElementById("overview_from_xml").innerHTML =
-    xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    
+    document.getElementById("fakbar_from_xml").innerHTML = 
+    xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue + ": " 
+    + xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
     //console.log(xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue)
-   $('#overview').show()
+   
+   //$('#overview').show()
 }
