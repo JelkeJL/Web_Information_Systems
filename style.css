@@ -9,8 +9,6 @@ body {
     padding: 0px;
 }
 
-
-
 h3 {
     font-family: 'Lato', sans-serif;
 }
@@ -159,20 +157,20 @@ ul {
 
 /* this is where the pictures get styled, inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
 
-.pics, .cudipics {
+.fakbarpics, .cudipics {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.pics, .cudipics img {
+.fakbarpics img, .cudipics img {
     width: 100%;
     top: 0;
     left: 0
 }
 
-div.pics, div.cudipics {
+div.fakbarpics, div.cudipics {
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -211,6 +209,8 @@ footer {
     display:none;
 }
 
+/* cudi page styling */
+
 #narrow {
   width: 40%;
   background: #f2f2f2;
@@ -227,6 +227,10 @@ footer {
 
 #wide p, #narrow p{
     font-size: 15px;
+}
+
+#narrow ul{
+    font-size: 20px;
 }
 
 #wide {
@@ -255,9 +259,4 @@ footer {
     background-color: #1D8DB0;
     box-shadow: 5px 5px #52BDEC;
 
-}
-
-.cudipics {
-    width: 100%;
-    float: left;
 }
