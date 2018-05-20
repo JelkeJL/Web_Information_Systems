@@ -4,20 +4,63 @@
 
 var map, infoWindow;
       function initMap() {
+
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 50.863002, lng: 4.678974},
           zoom: 15
         });
+
         infoWindow = new google.maps.InfoWindow;
 
-        //var image = 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png'
-        //walk = new google.maps.Marker({
-          //icon: image
-        //});
 
-// Try HTML5 geolocation; code based on Google documentation
+        // function to add Fakbar markers 
+
+        function addFaktoMap (a,b){
+
+            var addmarker = {lat: a, lng: b};
+
+            var beer = {
+              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
+              scaledSize: new google.maps.Size(40,40),
+              origin: new google.maps.Point(0,0),
+              anchor: new google.maps.Point(0,0),
+            };
+
+            var newmarker = new google.maps.Marker({
+              position: addmarker,
+              map: map,
+              icon: beer
+            });
+
+          };
+
+
+        //function to add cudi markers
+
+        function addCuditoMap (a,b){
+
+            var addmarker = {lat: a, lng: b};
+
+            var books = {
+              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
+              scaledSize: new google.maps.Size(40,40),
+              origin: new google.maps.Point(0,0),
+              anchor: new google.maps.Point(0,0),
+            };
+
+            var newmarker = new google.maps.Marker({
+              position: addmarker,
+              map: map,
+              icon: books
+            });
+
+          };
+
+        // Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
+
           navigator.geolocation.getCurrentPosition(function(position) {
+
             var pos = {
               lat: position.coords.latitude,
               lng: position.coords.longitude
@@ -34,16 +77,17 @@ var map, infoWindow;
             origin: new google.maps.Point(0,0), // origin
             anchor: new google.maps.Point(0, 0), // anchor
           }
+
           var marker = new google.maps.Marker({
             position: pos,
             map:map,
             icon: walk,
           });
 
-
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
+
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
@@ -60,32 +104,8 @@ var map, infoWindow;
         infoWindow.open(map,marker);
       };
 
-      function addtoMap(a,b, kind) {
-        var addmarker = {lat: a, lng: b};
 
-        var beer = {
-          url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
-          scaledSize: new google.maps.Size(40, 40),
-          origin: new google.maps.Point(0,0),
-          anchor: new google.maps.Point(0, 0),
-        };
 
-        var books = {
-          url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/books_1f4da.png',
-          scaledSize: new google.maps.Size(40, 40),
-          origin: new google.maps.Point(0,0),
-          anchor: new google.maps.Point(0, 0),
-        };
-
-        var newmarker = new google.maps.Marker({
-          position: addmarker,
-          map: map,
-          if kind == "fak":
-            icon: beer
-          else if kind == "cudi":
-            icon: books
-        });
-      };
 
 
 
@@ -118,15 +138,6 @@ $(document).ready(function() {
         }
         else if ($('#fac_hum').val() == 'arts'){
           $('#degrees_arts').show();
-          
-/*
-          $('#group').bind('change', function (e) {
-              $('#degrees_arts').hide();
-              if ($('#fac_hum').val() == 'arts'){
-                $('#degrees_arts').show();
-              }
-          })
-*/
 
         }
       }).trigger('change');
@@ -151,6 +162,9 @@ $(document).ready(function() {
   }).trigger('change');
 
 });
+
+
+
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -211,3 +225,4 @@ function myFunction_(xml) {
    
    //$('#overview').show()
 };
+
