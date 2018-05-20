@@ -4,9 +4,7 @@
         <name>Dulci</name>
         <description>Fakbar for Business and Economics</description>
         <Point>
-          <coordinates>
-            50.8772801,4.6982853,17
-          </coordinates>
+          <coordinates>50.8772801,4.6982853,17</coordinates>
         </Point>
       </Placemark>
 
@@ -14,9 +12,7 @@
         <name>Doc's Bar</name>
         <description>Fakbar for Medicine and Biomedical Sciences</description>
         <Point>
-          <coordinates>
-            50.8820124,4.6863157,17
-          </coordinates>
+          <coordinates>50.8820124,4.6863157,17</coordinates>
         </Point>
       </Placemark>
 
@@ -24,9 +20,7 @@
         <name>'t Elixir</name>
         <description>Fakbar for Engineering Science</description>
         <Point>
-          <coordinates>
-            50.8732118,4.6821207,15
-          </coordinates>
+          <coordinates>50.8732118,4.6821207,15</coordinates>
         </Point>
       </Placemark>
 
@@ -34,9 +28,7 @@
         <name>Fak Letteren</name>
         <description>Fakbar for Arts</description>
         <Point>
-          <coordinates>
-            50.8772331,4.7058529,17
-          </coordinates>
+          <coordinates>50.8772331,4.7058529,17</coordinates>
         </Point>
       </Placemark>
 
@@ -44,9 +36,7 @@
         <name>Gnorgl</name>
         <description>Fakbar for Bioscience Engineering</description>
         <Point>
-          <coordinates>
-            50.8640298,4.691578,17
-          </coordinates>
+          <coordinates>50.8640298,4.691578,17</coordinates>
         </Point>
       </Placemark>
 
@@ -54,9 +44,7 @@
         <name>Huis der Rechten</name>
         <description>Fakbar for Law</description>
         <Point>
-          <coordinates>
-            50.8772296,4.7025347,17
-          </coordinates>
+          <coordinates>50.8772296,4.7025347,17</coordinates>
         </Point>
       </Placemark>
 
@@ -64,9 +52,7 @@
         <name>Politika Kaffee</name>
         <description>Fakbar for Social Sciences</description>
         <Point>
-          <coordinates>
-            50.8772109,4.7025779,17
-          </coordinates>
+          <coordinates>50.8772109,4.7025779,17</coordinates>
         </Point>
       </Placemark>
 
@@ -74,9 +60,7 @@
         <name>Sportzak</name>
         <description>Fakbar for Kinesiology and Rehabilitation Sciences</description>
         <Point>
-          <coordinates>
-            50.8694894,4.6910225,17
-          </coordinates>
+          <coordinates>50.8694894,4.6910225,17</coordinates>
         </Point>
       </Placemark>
 
@@ -84,9 +68,7 @@
         <name>M Café (on Tuesday)</name>
         <description>Fakbar for Philosophy and Theology</description>
         <Point>
-          <coordinates>
-            50.8790607,4.7019164,17
-          </coordinates>
+          <coordinates>50.8790607,4.7019164,17</coordinates>
         </Point>
       </Placemark>
 
@@ -94,9 +76,7 @@
         <name>MAXIM'O></name>
         <description>Fakbar for Criminology</description>
         <Point>
-          <coordinates>
-            50.8771256,4.6984258,17
-          </coordinates>
+          <coordinates>50.8771256,4.6984258,17</coordinates>
         </Point>
       </Placemark>
 
@@ -104,9 +84,7 @@
         <name>Recup</name>
         <description>Fakbar for Psychology and Educational Sciences</description>
         <Point>
-          <coordinates>
-            50.8772397,4.7025077,17
-          </coordinates>
+          <coordinates>50.8772397,4.7025077,17</coordinates>
         </Point>
       </Placemark>
 
@@ -114,9 +92,7 @@
         <name>Winabar (Only on Wednesdays)</name>
         <description>Fakbar for Maths, Physics and Computer Sciences</description>
         <Point>
-          <coordinates>
-            50.8677112,4.6830511,17
-          </coordinates>
+          <coordinates>50.8677112,4.6830511,17</coordinates>
         </Point>
       </Placemark>
 

@@ -1,40 +1,4 @@
-// this is the javascript hi jelke
-
-// $(document).ready(function(){
-//     function initMap() {
-//         var ArenbergIII = {lat: 50.863002, lng: 4.678974};
-//         var map = new google.maps.Map(document.getElementById('map'), {
-//             zoom: 4,
-//             center: ArenbergIII
-//         });
-//         var marker = new google.maps.Marker({
-//             position: ArenbergIII,
-//             map: map
-//         });
-//     }
-//     async defer
-//     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZHYymzYflI1c7mbhFTcsb6NN4ss7LBwU&callback=initMap"
-// });
-
-/** function initMap() {
-    var ArenbergIII = {lat: 50.863002, lng: 4.678974};
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 9,
-        center: ArenbergIII
-    });
-    var marker = new google.maps.Marker({
-        position: ArenbergIII,
-        map: map
-    });
-}
-**/
-
 /* load geodata */
-
-
-
-
-
 // Code source: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation (Google API), last accessed 24 April 2018
 
 
@@ -64,7 +28,7 @@ var map, infoWindow;
            infoWindow.open(map);
             map.setCenter(pos);
 
-          var image = {
+          var walk = {
             url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
             scaledSize: new google.maps.Size(40, 40), // scaled size
             origin: new google.maps.Point(0,0), // origin
@@ -73,8 +37,9 @@ var map, infoWindow;
           var marker = new google.maps.Marker({
             position: pos,
             map:map,
-            icon: image,
+            icon: walk,
           });
+
 
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
@@ -93,7 +58,36 @@ var map, infoWindow;
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map,marker);
-      }
+      };
+
+      function addtoMap(a,b, kind) {
+        var addmarker = {lat: a, lng: b};
+
+        var beer = {
+          url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
+          scaledSize: new google.maps.Size(40, 40),
+          origin: new google.maps.Point(0,0),
+          anchor: new google.maps.Point(0, 0),
+        };
+
+        var books = {
+          url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/books_1f4da.png',
+          scaledSize: new google.maps.Size(40, 40),
+          origin: new google.maps.Point(0,0),
+          anchor: new google.maps.Point(0, 0),
+        };
+
+        var newmarker = new google.maps.Marker({
+          position: addmarker,
+          map: map,
+          if kind == "fak":
+            icon: beer
+          else if kind == "cudi":
+            icon: books
+        });
+      };
+
+
 
 //http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
 
@@ -162,7 +156,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this);
-    }
+    };
 };
 xhttp.open("GET", "fakbar_new.xml", true);
 xhttp.send();
@@ -174,7 +168,46 @@ function myFunction(xml) {
     document.getElementById("fakbar_from_xml").innerHTML = 
     xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue + ": " 
     + xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
-    //console.log(xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue)
+    //+ xmlDoc.getElementsByTagName("Point")[0]childNodes[0].nodeValue;
+    //console.log(xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue);
+    coordinates = xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
+    coordinates = coordinates.split(",");
+    //console.log(coordinates);
+    ecofaklat = coordinates[0]
+    ecofaklng = coordinates[1]
+    console.log(ecofaklat,ecofaklng)
+
+    eco = [ecofaklat, ecofaklng]
    
    //$('#overview').show()
-}
+};
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction_(this);
+    };
+};
+xhttp.open("GET", "cudi.xml", true);
+xhttp.send();
+
+function myFunction_(xml) {
+  // console.log(xml.responseText);
+    var xmlDoc = xml.responseXML;
+    
+    document.getElementById("cudi_from_xml").innerHTML = 
+    xmlDoc.getElementsByTagName("name")[8].childNodes[0].nodeValue + ": " 
+    + xmlDoc.getElementsByTagName("description")[8].childNodes[0].nodeValue;
+    //+ xmlDoc.getElementsByTagName("Point")[0]childNodes[0].nodeValue;
+    //console.log(xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue);
+    coordinates = xmlDoc.getElementsByTagName("coordinates")[8].childNodes[0].nodeValue;
+    coordinates = coordinates.split(",");
+    //console.log(coordinates);
+    lat = coordinates[0]
+    lng = coordinates[1]
+    console.log(lat,lng)
+
+
+   
+   //$('#overview').show()
+};
