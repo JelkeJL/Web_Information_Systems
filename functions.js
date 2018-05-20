@@ -56,6 +56,152 @@ var map, infoWindow;
 
           };
 
+          //reference to fakbar_new.xml
+        function retrieve_fak(o, p){
+        
+          var xhttp = new XMLHttpRequest();
+        
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                FakFunction(this, o, p);
+            };
+        };
+        
+        xhttp.open("GET", "fakbar_new.xml", true);
+        xhttp.send();
+        
+        }
+        
+        
+        //reference to cudi.xml
+        function retrieve_cudi(o, p){
+        
+          var xhttp_ = new XMLHttpRequest();
+        
+          xhttp_.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                CudiFunction(this, o, p);
+              };
+          };
+        
+          xhttp_.open("GET", "cudi.xml", true);
+          xhttp_.send();
+          }
+        
+        
+        //function to retrieve fakbar
+        function FakFunction(xml, i, j) {
+          // console.log(xml.responseText);
+            var xmlDoc = xml.responseXML;
+            
+            var fakbarname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
+        
+            coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
+            coordinates = coordinates.split(",");
+            //console.log(coordinates);
+            fak_lat = parseFloat(coordinates[0])
+            fak_lng = parseFloat(coordinates[1])
+            //console.log(fakbarname, fak_lat,fak_lng)
+        
+            addFaktoMap(fak_lat,fak_lng)
+
+
+            document.getElementById("fakbar_from_xml").innerHTML = 
+            xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+            + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+        
+            //return [fak_lat,fak_lng]
+        };
+
+
+        //function to retrieve cudi
+        function CudiFunction(xml, i, j) {
+        
+          // console.log(xml.responseText);
+          var xmlDoc = xml.responseXML;
+        
+          var cudiname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
+        
+          coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
+          coordinates = coordinates.split(",");
+          //console.log(coordinates);
+          cudi_lat = parseFloat(coordinates[0]);
+          cudi_lng = parseFloat(coordinates[1]);
+          //console.log(cudiname, cudi_lat,cudi_lng)
+        
+          addCuditoMap(cudi_lat,cudi_lng)
+            
+          document.getElementById("cudi_from_xml").innerHTML = 
+          xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+          + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+        
+          cudi_coor = [cudi_lat,cudi_lng];
+          console.log(cudi_coor);
+          //return cudi_coor;
+        
+        };
+
+        $(document).ready(function() {
+
+          $('#group').bind('change', function (e) { 
+            //console.log("change");
+        
+            $('#overview').hide()
+        
+            if ($('#group').val() == 'empty'){
+              $('#faculty_biomedical').hide();      
+              $('#faculties_humanities').hide();
+              $('#faculties_science').hide();
+              $('#degrees_arts').hide();
+            }
+        
+            else if($('#group').val() == 'humanities') {     
+              $('#faculties_science').hide();
+              $('#faculty_biomedical').hide();
+        
+              $('#faculties_humanities').show();
+        
+              $('#fac_hum').bind('change', function (e){
+                if ($('#fac_hum').val() != 'arts'){
+                  $('#degrees_arts').hide();
+        
+                  if ($('#fac_hum').val() == 'economics'){
+                    $('#overview').show();
+                    retrieve_cudi(8,0)
+                    retrieve_fak(0,0)
+        
+                  };
+        
+                }
+        
+            else if ($('#fac_hum').val() == 'arts'){
+              $('#degrees_arts').show();
+            };
+    
+          }).trigger('change');
+        }
+
+            else if( $('#group').val() == 'science') {
+              $('#faculties_science').show();
+              
+              $('#faculties_humanities').hide();
+              $('#faculty_biomedical').hide();
+              $('#degrees_arts').hide()
+            }
+        
+            else if( $('#group').val() == 'biomedical') {
+              $('#faculty_biomedical').show();
+              
+              $('#faculties_humanities').hide();
+              $('#faculties_science').hide();
+        
+              $('#degrees_arts').hide();
+            }
+        
+          }).trigger('change');
+        
+        });
+
         //test if addmarker functions work: successful
         /*addFaktoMap(50.8772801, 4.6982853)
         addCuditoMap(50.8742119, 4.7050093)*/
@@ -108,7 +254,7 @@ var map, infoWindow;
         infoWindow.open(map,marker);
       };
 
-
+/*
 //reference to fakbar_new.xml
 function retrieve_fak(o, p){
 
@@ -194,13 +340,15 @@ function CudiFunction(xml, i, j) {
 
 };
 
-retrieve_cudi(8,0)
-console.log("test: ", retrieve_cudi(8,0))
-retrieve_fak(0,0)
+///retrieve_cudi(8,0)
+///console.log("test: ", retrieve_cudi(8,0))
+///retrieve_fak(0,0)
+*/
+
 
 //construct interactive dropdown menus
 //http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   $('#group').bind('change', function (e) { 
     //console.log("change");
@@ -258,7 +406,7 @@ $(document).ready(function() {
   }).trigger('change');
 
 });
-
+*/
 
 
 
