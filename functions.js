@@ -118,14 +118,25 @@ xhttp.open("GET", "fakbar_new.xml", true);
 xhttp.send();
 
 //reference to cudi.xml
+function retrieve_cudi(o, p){
+  var xhttp_ = new XMLHttpRequest();
+  xhttp_.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction_(this, o, p);
+      };
+  };
+  xhttp_.open("GET", "cudi.xml", true);
+  xhttp_.send();
+  }
+/*
 var xhttp_ = new XMLHttpRequest();
 xhttp_.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        myFunction_(this);
+        myFunction_(this, 8, 0);
     };
 };
 xhttp_.open("GET", "cudi.xml", true);
-xhttp_.send();
+xhttp_.send();*/
 
 
 //function to retrieve fakbar
@@ -153,16 +164,16 @@ function myFunction(xml) {
 };
 
 //function to retrieve cudi
-function myFunction_(xml) {
+function myFunction_(xml, i, j) {
   // console.log(xml.responseText);
     var xmlDoc = xml.responseXML;
     
     document.getElementById("cudi_from_xml").innerHTML = 
-    xmlDoc.getElementsByTagName("name")[8].childNodes[0].nodeValue + ": " 
-    + xmlDoc.getElementsByTagName("description")[8].childNodes[0].nodeValue;
+    xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+    + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
     //+ xmlDoc.getElementsByTagName("Point")[0]childNodes[0].nodeValue;
     //console.log(xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue);
-    coordinates = xmlDoc.getElementsByTagName("coordinates")[8].childNodes[0].nodeValue;
+    coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
     coordinates = coordinates.split(",");
     //console.log(coordinates);
     lat = coordinates[0]
@@ -174,6 +185,7 @@ function myFunction_(xml) {
    //$('#overview').show()
 };
 
+retrieve_cudi(8,0)
 
 //http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
 
@@ -203,6 +215,7 @@ $(document).ready(function() {
 
           if ($('#fac_hum').val() == 'economics'){
             $('#overview').show();
+
           };
 
         }
