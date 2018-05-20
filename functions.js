@@ -21,7 +21,7 @@ var map, infoWindow;
 
             var beer = {
               url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
-              scaledSize: new google.maps.Size(40,40),
+              scaledSize: new google.maps.Size(17,17),
               origin: new google.maps.Point(0,0),
               anchor: new google.maps.Point(0,0),
             };
@@ -42,8 +42,8 @@ var map, infoWindow;
             var addmarker = {lat: a, lng: b};
 
             var books = {
-              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
-              scaledSize: new google.maps.Size(40,40),
+              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/books_1f4da.png',
+              scaledSize: new google.maps.Size(20,20),
               origin: new google.maps.Point(0,0),
               anchor: new google.maps.Point(0,0),
             };
@@ -55,6 +55,10 @@ var map, infoWindow;
             });
 
           };
+
+        //test if addmarker functions work: successful
+        /*addFaktoMap(50.8772801, 4.6982853)
+        addCuditoMap(50.8742119, 4.7050093)*/
 
         // Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
@@ -185,14 +189,13 @@ function CudiFunction(xml, i, j) {
   + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
 
   cudi_coor = [cudi_lat,cudi_lng];
-  console.log(cudi_coor);
+  //console.log(cudi_coor);
   return cudi_coor;
 
 };
 
 retrieve_cudi(8,0)
-//console.log(retrieve_cudi(8,0))
-
+console.log("test: ", retrieve_cudi(8,0))
 retrieve_fak(0,0)
 
 //construct interactive dropdown menus
