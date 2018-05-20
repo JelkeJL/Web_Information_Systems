@@ -106,89 +106,97 @@ var map, infoWindow;
 
 
 //reference to fakbar_new.xml
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-    };
+function retrieve_fak(o, p){
 
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        FakFunction(this, o, p);
+    };
 };
 
 xhttp.open("GET", "fakbar_new.xml", true);
 xhttp.send();
 
+}
+
+
 //reference to cudi.xml
 function retrieve_cudi(o, p){
+
   var xhttp_ = new XMLHttpRequest();
+
   xhttp_.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        myFunction_(this, o, p);
+        CudiFunction(this, o, p);
       };
   };
+
   xhttp_.open("GET", "cudi.xml", true);
   xhttp_.send();
   }
-/*
-var xhttp_ = new XMLHttpRequest();
-xhttp_.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction_(this, 8, 0);
-    };
-};
-xhttp_.open("GET", "cudi.xml", true);
-xhttp_.send();*/
 
 
 //function to retrieve fakbar
-function myFunction(xml) {
+function FakFunction(xml, i, j) {
   // console.log(xml.responseText);
     var xmlDoc = xml.responseXML;
     
-    var fakbarname = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    var fakbarname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
 
-    document.getElementById("fakbar_from_xml").innerHTML = 
-    xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue + ": " 
-    + xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
-    //+ xmlDoc.getElementsByTagName("Point")[0]childNodes[0].nodeValue;
-    //console.log(xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue);
-    coordinates = xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
-    coordinates = coordinates.split(",");
-    //console.log(coordinates);
-    ecofaklat = coordinates[0]
-    ecofaklng = coordinates[1]
-    console.log(fakbarname, ecofaklat,ecofaklng)
-
-    eco = [ecofaklat, ecofaklng]
-   
-   //$('#overview').show()
-};
-
-//function to retrieve cudi
-function myFunction_(xml, i, j) {
-  // console.log(xml.responseText);
-    var xmlDoc = xml.responseXML;
-    
-    document.getElementById("cudi_from_xml").innerHTML = 
-    xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
-    + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
-    //+ xmlDoc.getElementsByTagName("Point")[0]childNodes[0].nodeValue;
-    //console.log(xmlDoc.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue);
     coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
     coordinates = coordinates.split(",");
     //console.log(coordinates);
-    lat = coordinates[0]
-    lng = coordinates[1]
-    console.log(lat,lng)
+    fak_lat = coordinates[0]
+    fak_lng = coordinates[1]
+    //console.log(fakbarname, fak_lat,fak_lng)
+
+    //addFaktoMap(fak_lat,fak_lng)
 
 
-   
-   //$('#overview').show()
+    document.getElementById("fakbar_from_xml").innerHTML = 
+    xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+    + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+
+    return [fak_lat,fak_lng]
+};
+
+
+//function to retrieve cudi
+function CudiFunction(xml, i, j) {
+
+  // console.log(xml.responseText);
+  var xmlDoc = xml.responseXML;
+
+  var cudiname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
+
+  coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
+  coordinates = coordinates.split(",");
+  //console.log(coordinates);
+  cudi_lat = coordinates[0];
+  cudi_lng = coordinates[1];
+  //console.log(cudiname, cudi_lat,cudi_lng)
+
+  //addCuditoMap(cudi_lat,cudi_lng)
+    
+  document.getElementById("cudi_from_xml").innerHTML = 
+  xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+  + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+
+  cudi_coor = [cudi_lat,cudi_lng];
+  console.log(cudi_coor);
+  return cudi_coor;
+
 };
 
 retrieve_cudi(8,0)
+//console.log(retrieve_cudi(8,0))
 
+retrieve_fak(0,0)
+
+//construct interactive dropdown menus
 //http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
-
 $(document).ready(function() {
 
   $('#group').bind('change', function (e) { 
