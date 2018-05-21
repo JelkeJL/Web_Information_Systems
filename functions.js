@@ -139,7 +139,11 @@ var map, infoWindow;
           console.log(cudi_coor);
           //return cudi_coor;
         
-        };
+        }
+
+        //test if addmarker functions work: successful
+        /*addFaktoMap(50.8772801, 4.6982853)
+        addCuditoMap(50.8742119, 4.7050093)*/
 
         $(document).ready(function() {
 
@@ -177,9 +181,16 @@ var map, infoWindow;
                     retrieve_cudi(12,0)
                     retrieve_fak(8,0)
                     
+                  } else if ($('#fac_hum').val() == "canon"){
+                    document.getElementById("cudi_from_xml").innerHTML = "Our dataset does not contain any information on canon law course services. However, check https://katechetika.be/student for more information"
+                    document.getElementById("fakbar_from_xml").innerHTML = "Our dataset does not contain any information on canon law fakbars. However, check https://katechetika.be/student for more information"
+
+
                   } else if ($('#fac_hum').val() == 'theology'){
                     $('#overview').show();
                     retrieve_fak(8,0)
+                    document.getElementById("cudi_from_xml").innerHTML = "Our dataset does not contain any information on theology course services. However, check https://katechetika.be/student for more information"
+
                     
                   } else if ($('#fac_hum').val() == 'law'){
                     $('#overview').show();
@@ -219,28 +230,53 @@ var map, infoWindow;
         }
 
             else if( $('#group').val() == 'science') {
-              $('#faculties_science').show();
-              
               $('#faculties_humanities').hide();
               $('#faculty_biomedical').hide();
               $('#degrees_arts').hide()
+
+              $('#faculties_science').show();
+
+              $('#fac_sci').bind('change', function (e){
+                if ($('#fac_sci').val() == 'empty'){
+                  $('#overview').hide();
+                } else if ($('#fac_sci').val() == 'architecture'){
+                  retrieve_fak(2,0)
+                  retrieve_cudi(4,0)
+                  $('#overview').show();
+                } else if ($('#fac_sci').val() == 'science'){
+                  retrieve_fak(11,0)
+                  retrieve_cudi(5,0)
+                  $('#overview').show();
+                } else if ($('#fac_sci').val() == 'engineering_sc'){
+                  retrieve_fak(2,0)
+                  retrieve_cudi(4,0)
+                  $('#overview').show();
+                } else if ($('#fac_sci').val() == 'bioscience'){
+                  retrieve_fak(4,0)
+                  retrieve_cudi(11,0)
+                  $('#overview').show();
+                } else if ($('#fac_sci').val() == 'engineering'){
+                  retrieve_fak(2,0)
+                  retrieve_cudi(1,0)
+                  $('#overview').show();
+                }
+              }).trigger('change');
+              
+
             }
         
             else if( $('#group').val() == 'biomedical') {
-              $('#faculty_biomedical').show();
-              
               $('#faculties_humanities').hide();
               $('#faculties_science').hide();
-              $('#degrees_arts').hide();
+              $('#degrees_arts').hide();              
+
+              $('#faculty_biomedical').show();
             }
         
           }).trigger('change');
         
         });
 
-        //test if addmarker functions work: successful
-        /*addFaktoMap(50.8772801, 4.6982853)
-        addCuditoMap(50.8742119, 4.7050093)*/
 
         // Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
