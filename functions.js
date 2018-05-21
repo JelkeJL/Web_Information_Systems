@@ -153,6 +153,7 @@ var map, infoWindow;
               $('#faculties_humanities').hide();
               $('#faculties_science').hide();
               $('#degrees_arts').hide();
+              $('#overview').hide();
             }
         
             else if($('#group').val() == 'humanities') {     
@@ -162,7 +163,9 @@ var map, infoWindow;
               $('#faculties_humanities').show();
         
               $('#fac_hum').bind('change', function (e){
-                if ($('#fac_hum').val() != 'arts'){
+                if ($('#fac_hum').val() == 'empty'){
+                  $('#overview').hide();
+                } else if ($('#fac_hum').val() != 'arts'){
                   $('#degrees_arts').hide();
         
                   if ($('#fac_hum').val() == 'economics'){
@@ -172,6 +175,10 @@ var map, infoWindow;
                   } else if ($('#fac_hum').val() == 'philosophy'){
                     $('#overview').show();
                     retrieve_cudi(12,0)
+                    retrieve_fak(8,0)
+                    
+                  } else if ($('#fac_hum').val() == 'theology'){
+                    $('#overview').show();
                     retrieve_fak(8,0)
                     
                   } else if ($('#fac_hum').val() == 'law'){
@@ -186,15 +193,31 @@ var map, infoWindow;
                     $('#overview').show();
                     retrieve_cudi(6,0)
                     retrieve_fak(10,0)
-                  }
+                  } 
         
-                }
-        
-            else if ($('#fac_hum').val() == 'arts'){
-              $('#degrees_arts').show();
-            };
+                } else if ($('#fac_hum').val() == 'arts'){
     
-          }).trigger('change');
+                  $('#degrees_arts').show();
+
+                  $('#degrees_arts').bind('change', function (e){
+
+                    if ($('#degrees_arts').val() != 'literature'){
+                      $('#overview').show();
+                      retrieve_fak(3,0)
+                      retrieve_cudi(3,0)
+                    } else if ($('#degrees_arts').val() == 'literature'){
+                      $('#overview').show();
+                      retrieve_fak(3,0)
+                      retrieve_cudi(0,0)
+                    } else if ($('#degrees_arts').val() == 'empty'){
+                      $('#overview').hide();
+                    }
+
+                  }).trigger('change');
+    
+                } 
+    
+              }).trigger('change');
         }
 
             else if( $('#group').val() == 'science') {
