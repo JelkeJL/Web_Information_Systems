@@ -110,7 +110,8 @@ var map, infoWindow;
             xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
             + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
         
-            //return [fak_lat,fak_lng]
+            fak_coor = [fak_lat,fak_lng];
+            console.log(fak_coor);
         };
 
 
@@ -271,6 +272,25 @@ var map, infoWindow;
               $('#degrees_arts').hide();              
 
               $('#faculty_biomedical').show();
+              $('#fac_bio').bind('change', function (e){
+
+                if ($('#fac_bio').val() == 'empty'){
+                  $('#overview').hide();
+                } else if ($('#fac_bio').val() == 'medicine'){
+                  retrieve_fak(1,0)
+                  retrieve_cudi(9,0)
+                  $('#overview').show();
+                } else if ($('#fac_bio').val() == 'pharma'){
+                  retrieve_fak(1,0)
+                  retrieve_cudi(9,0)
+                  $('#overview').show();
+                } else if ($('#fac_bio').val() == 'kine'){
+                  retrieve_fak(7,0)
+                  retrieve_cudi(2,0)
+                  $('#overview').show();
+                }
+
+              }).trigger('change');
             }
         
           }).trigger('change');
@@ -295,7 +315,7 @@ var map, infoWindow;
 
           var walk = {
             url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
-            scaledSize: new google.maps.Size(40, 40), // scaled size
+            scaledSize: new google.maps.Size(20, 20), // scaled size
             origin: new google.maps.Point(0,0), // origin
             anchor: new google.maps.Point(0, 0), // anchor
           }
