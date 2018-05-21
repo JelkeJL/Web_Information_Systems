@@ -7,7 +7,7 @@ var map, infoWindow;
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 50.863002, lng: 4.678974},
-          zoom: 15
+          zoom: 13
         });
 
         infoWindow = new google.maps.InfoWindow;
@@ -58,7 +58,7 @@ var map, infoWindow;
 
           //reference to fakbar_new.xml
         function retrieve_fak(o, p){
-        
+
           var xhttp = new XMLHttpRequest();
         
           xhttp.onreadystatechange = function() {
@@ -75,7 +75,7 @@ var map, infoWindow;
         
         //reference to cudi.xml
         function retrieve_cudi(o, p){
-        
+
           var xhttp_ = new XMLHttpRequest();
         
           xhttp_.onreadystatechange = function() {
@@ -142,6 +142,97 @@ var map, infoWindow;
         
         }
 
+        function retrieve_refresh(a,b){
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 50.863002, lng: 4.678974},
+          zoom: 13
+          });
+
+          retrieve_fak(a,0)
+          retrieve_cudi(b,0)
+
+          if (navigator.geolocation) {
+  
+            navigator.geolocation.getCurrentPosition(function(position) {
+  
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+  
+             infoWindow.setPosition(pos);
+             infoWindow.setContent('You are here.');
+             infoWindow.open(map);
+              map.setCenter(pos);
+  
+            var walk = {
+              url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
+              scaledSize: new google.maps.Size(20, 20), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(0, 0), // anchor
+            }
+  
+            var marker = new google.maps.Marker({
+              position: pos,
+              map:map,
+              icon: walk,
+            });
+  
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+  
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+
+          }
+        }
+
+        function refresh(){
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 50.863002, lng: 4.678974},
+          zoom: 13
+          });
+
+          if (navigator.geolocation) {
+  
+            navigator.geolocation.getCurrentPosition(function(position) {
+  
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+  
+             infoWindow.setPosition(pos);
+             infoWindow.setContent('You are here.');
+             infoWindow.open(map);
+              map.setCenter(pos);
+  
+            var walk = {
+              url : 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/woman-walking_1f6b6-200d-2640-fe0f.png',
+              scaledSize: new google.maps.Size(20, 20), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(0, 0), // anchor
+            }
+  
+            var marker = new google.maps.Marker({
+              position: pos,
+              map:map,
+              icon: walk,
+            });
+  
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+  
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+
+          }
+        }
+
         //test if addmarker functions work: successful
         /*addFaktoMap(50.8772801, 4.6982853)
         addCuditoMap(50.8742119, 4.7050093)*/
@@ -151,7 +242,8 @@ var map, infoWindow;
           $('#group').bind('change', function (e) { 
             //console.log("change");
         
-            $('#overview').hide()
+            $('#overview').hide();
+            refresh();
         
             if ($('#group').val() == 'empty'){
               $('#faculty_biomedical').hide();      
@@ -159,6 +251,7 @@ var map, infoWindow;
               $('#faculties_science').hide();
               $('#degrees_arts').hide();
               $('#overview').hide();
+              refresh();
             }
         
             else if($('#group').val() == 'humanities') {     
@@ -170,17 +263,20 @@ var map, infoWindow;
               $('#fac_hum').bind('change', function (e){
                 if ($('#fac_hum').val() == 'empty'){
                   $('#overview').hide();
+                  refresh();
                 } else if ($('#fac_hum').val() != 'arts'){
                   $('#degrees_arts').hide();
         
                   if ($('#fac_hum').val() == 'economics'){
                     $('#overview').show();
-                    retrieve_cudi(8,0)
-                    retrieve_fak(0,0)
+                    //retrieve_cudi(8,0)
+                    //retrieve_fak(0,0)
+                    retrieve_refresh(0,8)
                   } else if ($('#fac_hum').val() == 'philosophy'){
                     $('#overview').show();
-                    retrieve_cudi(12,0)
-                    retrieve_fak(8,0)
+                    //retrieve_cudi(12,0)
+                    //retrieve_fak(8,0)
+                    retrieve_refresh(8,12)
                     
                   } else if ($('#fac_hum').val() == "canon"){
                     document.getElementById("cudi_from_xml").innerHTML = "Our dataset does not contain any information on canon law course services. However, check https://katechetika.be/student for more information"
@@ -195,16 +291,19 @@ var map, infoWindow;
                     
                   } else if ($('#fac_hum').val() == 'law'){
                     $('#overview').show();
-                    retrieve_cudi(7,0)
-                    retrieve_fak(5,0)
+                    retrieve_refresh(6,13)
+                    //retrieve_cudi(7,0)
+                    //retrieve_fak(5,0)
                   } else if ($('#fac_hum').val() == 'social'){
                     $('#overview').show();
-                    retrieve_cudi(13,0)
-                    retrieve_fak(6,0)
+                    //retrieve_cudi(13,0)
+                    //retrieve_fak(6,0)
+                    retrieve_refresh(6,13)
                   } else if ($('#fac_hum').val() == 'psychology'){
                     $('#overview').show();
-                    retrieve_cudi(6,0)
-                    retrieve_fak(10,0)
+                    //retrieve_cudi(6,0)
+                    //retrieve_fak(10,0)
+                    retrieve_refresh(10,6)
                   } 
         
                 } else if ($('#fac_hum').val() == 'arts'){
@@ -214,13 +313,16 @@ var map, infoWindow;
                   $('#degree').bind('change', function (e){
                     if ($('#degree').val() == 'empty'){
                       $('#overview').hide();
+                      refresh();
                     } else if ($('#degree').val() == 'literature'){
-                      retrieve_fak(3,0)
-                      retrieve_cudi(1,0)
+                      //retrieve_fak(3,0)
+                      //retrieve_cudi(1,0)
+                      retrieve_refresh(3,1)
                       $('#overview').show();
                     } else {
-                      retrieve_fak(3,0)
-                      retrieve_cudi(3,0)
+                      //retrieve_fak(3,0)
+                      //retrieve_cudi(3,0)
+                      retrieve_refresh(3,3)
                       $('#overview').show();
                     }
                   }).trigger('change');
@@ -240,25 +342,31 @@ var map, infoWindow;
               $('#fac_sci').bind('change', function (e){
                 if ($('#fac_sci').val() == 'empty'){
                   $('#overview').hide();
+                  refresh();
                 } else if ($('#fac_sci').val() == 'architecture'){
-                  retrieve_fak(2,0)
-                  retrieve_cudi(4,0)
+                  //retrieve_fak(2,0)
+                  //retrieve_cudi(4,0)
+                  retrieve_refresh(2,4)
                   $('#overview').show();
                 } else if ($('#fac_sci').val() == 'science'){
-                  retrieve_fak(11,0)
-                  retrieve_cudi(5,0)
+                  //retrieve_fak(11,0)
+                  //retrieve_cudi(5,0)
+                  retrieve_refresh(11,5)
                   $('#overview').show();
                 } else if ($('#fac_sci').val() == 'engineering_sc'){
-                  retrieve_fak(2,0)
-                  retrieve_cudi(4,0)
+                  //retrieve_fak(2,0)
+                  //retrieve_cudi(4,0)
+                  retrieve_refresh(2,4)
                   $('#overview').show();
                 } else if ($('#fac_sci').val() == 'bioscience'){
-                  retrieve_fak(4,0)
-                  retrieve_cudi(11,0)
+                  //retrieve_fak(4,0)
+                  //retrieve_cudi(11,0)
+                  retrieve_refresh(4,11)
                   $('#overview').show();
                 } else if ($('#fac_sci').val() == 'engineering'){
-                  retrieve_fak(2,0)
-                  retrieve_cudi(1,0)
+                  //retrieve_fak(2,0)
+                  //retrieve_cudi(1,0)
+                  retrieve_refresh(2,1)
                   $('#overview').show();
                 }
               }).trigger('change');
@@ -275,18 +383,22 @@ var map, infoWindow;
               $('#fac_bio').bind('change', function (e){
 
                 if ($('#fac_bio').val() == 'empty'){
-                  $('#overview').hide();
+                  $('#overview').hide()
+                  refresh();
                 } else if ($('#fac_bio').val() == 'medicine'){
-                  retrieve_fak(1,0)
-                  retrieve_cudi(9,0)
+                  //retrieve_fak(1,0)
+                  //retrieve_cudi(9,0)
+                  retrieve_refresh(1,9)
                   $('#overview').show();
                 } else if ($('#fac_bio').val() == 'pharma'){
-                  retrieve_fak(1,0)
-                  retrieve_cudi(9,0)
+                  //retrieve_fak(1,0)
+                  //retrieve_cudi(9,0)
+                  retrieve_refresh(1,9)
                   $('#overview').show();
                 } else if ($('#fac_bio').val() == 'kine'){
-                  retrieve_fak(7,0)
-                  retrieve_cudi(2,0)
+                  //retrieve_fak(7,0)
+                  //retrieve_cudi(2,0)
+                  retrieve_refresh(7,2)
                   $('#overview').show();
                 }
 
