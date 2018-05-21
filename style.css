@@ -125,8 +125,6 @@ ul {
     text-decoration: none;
 }
 
-
-
 /* home page */
 
 #faculties_humanities{
@@ -145,37 +143,51 @@ ul {
     display:none;
 }
 
-
-
 /* about page */
 
 #info {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+#us {
+    position: absolute;
+}
+
+#students {
+    width: 60%;
+    background: #f2f2f2;
     padding: 10px;
-    float: center;
-    background-color: #f2f2f2;
-    margin: 110px 30px 20px;
 }
 
 #students img {
     border-radius: 50%;
-    border-color: #ffffd4d;
-    width: 15%;
+    border-color: black;
+    width: 20%;
     height: auto;
     overflow: hidden;
     border-style: solid;
     float: left top;
     position: relative;
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
 }
 
-#students p{
+#students p {
     float: right;
-    width: 83%;
+    width: 75%;
+    padding-right: 10px;
 }
 
-#students {
-    padding: 5px;
+#DH {
+    width: 27%;
+    background: #f2f2f2;
+    padding: 0.75em;
+}
+
+#why {
+
 }
 
 
@@ -209,7 +221,6 @@ div.cudipics {
     margin-top: 30px;
 }
 
-
 /* footer */
 
 footer {
@@ -227,9 +238,6 @@ footer {
 .github {
     float: right;
 }
-
-
-
 
 /* cudi page styling */
 
@@ -260,9 +268,6 @@ footer {
   background: #f2f2f2;
   padding: 0.75em;
 }
-
-
-
 
 /* fak page styling */
 
