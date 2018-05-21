@@ -66,6 +66,7 @@ ul {
     width: 100%;
     height: 400px;
     background-color: lightgrey;
+    margin-bottom: 10px;
 }
 
 
@@ -126,6 +127,55 @@ ul {
 }
 
 /* home page */
+
+.box {
+    margin-top: 120px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+#selectmenu {
+    width: 40%;
+    background: #f2f2f2;
+    padding: 0.75em;
+}
+
+#overview {
+    width: 40%;
+    background: #f2f2f2;
+    padding: 0.75em;
+}
+
+/*
+
+#selectmenu {
+    width: 30%;
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: #f2f2f2;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+
+#overview {
+    width: 30%;
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: #f2f2f2;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+*/
 
 #faculties_humanities{
     display:none;
