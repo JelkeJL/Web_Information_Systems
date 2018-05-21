@@ -196,12 +196,14 @@ var map, infoWindow;
                   } 
         
                 } else if ($('#fac_hum').val() == 'arts'){
-    
+                  $('#overview').hide();
                   $('#degrees_arts').show();
 
                   $('#degrees_arts').bind('change', function (e){
-
-                    if ($('#degrees_arts').val() != 'literature'){
+                    $('#overview').hide();
+                    if ($('#degrees_arts').val() == 'empty'){
+                      $('#overview').hide();
+                    } else if ($('#degrees_arts').val() != 'literature'){
                       $('#overview').show();
                       retrieve_fak(3,0)
                       retrieve_cudi(3,0)
@@ -209,9 +211,7 @@ var map, infoWindow;
                       $('#overview').show();
                       retrieve_fak(3,0)
                       retrieve_cudi(0,0)
-                    } else if ($('#degrees_arts').val() == 'empty'){
-                      $('#overview').hide();
-                    }
+                    } 
 
                   }).trigger('change');
     
@@ -233,7 +233,6 @@ var map, infoWindow;
               
               $('#faculties_humanities').hide();
               $('#faculties_science').hide();
-        
               $('#degrees_arts').hide();
             }
         
