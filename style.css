@@ -178,6 +178,7 @@ ul {
     float: right;
     width: 75%;
     padding-right: 10px;
+    font-size: 14px;
 }
 
 #DH {
@@ -186,8 +187,24 @@ ul {
     padding: 0.75em;
 }
 
-#why {
+#DH p {
+    font-size: 16px;
+    padding: 5px;
+}
 
+#DH h1 {
+    padding: 5px;
+}
+
+#why {
+    width: 95,5%;
+    background: #f2f2f2;
+    margin: 30px;
+    padding: 10px;
+}
+
+#why p {
+    font-size: 14px;
 }
 
 
@@ -337,7 +354,23 @@ footer {
     display: flex;
 }
 
-#button_cudi:hover, #button_fakbar:hover {
+#button_dh {
+    border-radius: 10px;
+    width: 60%;
+    background-color: #52BDEC;
+    box-shadow: 5px 5px #1D8DB0;
+    padding: 1.5em;
+    margin: 50px;
+    margin-left: 14%;
+    font-style: normal;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+}
+
+#button_cudi:hover, #button_fakbar:hover, #button_dh:hover {
     background-color: #1D8DB0;
     box-shadow: 5px 5px #52BDEC;
 }
