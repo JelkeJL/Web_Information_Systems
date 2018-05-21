@@ -196,23 +196,21 @@ var map, infoWindow;
                   } 
         
                 } else if ($('#fac_hum').val() == 'arts'){
-                  $('#overview').hide();
+                  
                   $('#degrees_arts').show();
 
-                  $('#degrees_arts').bind('change', function (e){
-                    $('#overview').hide();
-                    if ($('#degrees_arts').val() == 'empty'){
+                  $('#degree').bind('change', function (e){
+                    if ($('#degree').val() == 'empty'){
                       $('#overview').hide();
-                    } else if ($('#degrees_arts').val() != 'literature'){
+                    } else if ($('#degree').val() == 'literature'){
+                      retrieve_fak(3,0)
+                      retrieve_cudi(1,0)
                       $('#overview').show();
+                    } else {
                       retrieve_fak(3,0)
                       retrieve_cudi(3,0)
-                    } else if ($('#degrees_arts').val() == 'literature'){
                       $('#overview').show();
-                      retrieve_fak(3,0)
-                      retrieve_cudi(0,0)
-                    } 
-
+                    }
                   }).trigger('change');
     
                 } 
