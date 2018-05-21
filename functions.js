@@ -21,7 +21,7 @@ var map, infoWindow;
 
             var beer = {
               url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
-              scaledSize: new google.maps.Size(40,40),
+              scaledSize: new google.maps.Size(17,17),
               origin: new google.maps.Point(0,0),
               anchor: new google.maps.Point(0,0),
             };
@@ -42,8 +42,8 @@ var map, infoWindow;
             var addmarker = {lat: a, lng: b};
 
             var books = {
-              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/beer-mug_1f37a.png',
-              scaledSize: new google.maps.Size(40,40),
+              url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/129/books_1f4da.png',
+              scaledSize: new google.maps.Size(20,20),
               origin: new google.maps.Point(0,0),
               anchor: new google.maps.Point(0,0),
             };
@@ -55,6 +55,172 @@ var map, infoWindow;
             });
 
           };
+
+          //reference to fakbar_new.xml
+        function retrieve_fak(o, p){
+        
+          var xhttp = new XMLHttpRequest();
+        
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                FakFunction(this, o, p);
+            };
+        };
+        
+        xhttp.open("GET", "fakbar_new.xml", true);
+        xhttp.send();
+        
+        }
+        
+        
+        //reference to cudi.xml
+        function retrieve_cudi(o, p){
+        
+          var xhttp_ = new XMLHttpRequest();
+        
+          xhttp_.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                CudiFunction(this, o, p);
+              };
+          };
+        
+          xhttp_.open("GET", "cudi.xml", true);
+          xhttp_.send();
+          }
+        
+        
+        //function to retrieve fakbar
+        function FakFunction(xml, i, j) {
+          // console.log(xml.responseText);
+            var xmlDoc = xml.responseXML;
+            
+            var fakbarname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
+        
+            coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
+            coordinates = coordinates.split(",");
+            //console.log(coordinates);
+            fak_lat = parseFloat(coordinates[0])
+            fak_lng = parseFloat(coordinates[1])
+            //console.log(fakbarname, fak_lat,fak_lng)
+        
+            addFaktoMap(fak_lat,fak_lng)
+
+
+            document.getElementById("fakbar_from_xml").innerHTML = 
+            xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+            + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+        
+            //return [fak_lat,fak_lng]
+        };
+
+
+        //function to retrieve cudi
+        function CudiFunction(xml, i, j) {
+        
+          // console.log(xml.responseText);
+          var xmlDoc = xml.responseXML;
+        
+          var cudiname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
+        
+          coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
+          coordinates = coordinates.split(",");
+          //console.log(coordinates);
+          cudi_lat = parseFloat(coordinates[0]);
+          cudi_lng = parseFloat(coordinates[1]);
+          //console.log(cudiname, cudi_lat,cudi_lng)
+        
+          addCuditoMap(cudi_lat,cudi_lng)
+            
+          document.getElementById("cudi_from_xml").innerHTML = 
+          xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
+          + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
+        
+          cudi_coor = [cudi_lat,cudi_lng];
+          console.log(cudi_coor);
+          //return cudi_coor;
+        
+        };
+
+        $(document).ready(function() {
+
+          $('#group').bind('change', function (e) { 
+            //console.log("change");
+        
+            $('#overview').hide()
+        
+            if ($('#group').val() == 'empty'){
+              $('#faculty_biomedical').hide();      
+              $('#faculties_humanities').hide();
+              $('#faculties_science').hide();
+              $('#degrees_arts').hide();
+            }
+        
+            else if($('#group').val() == 'humanities') {     
+              $('#faculties_science').hide();
+              $('#faculty_biomedical').hide();
+        
+              $('#faculties_humanities').show();
+        
+              $('#fac_hum').bind('change', function (e){
+                if ($('#fac_hum').val() != 'arts'){
+                  $('#degrees_arts').hide();
+        
+                  if ($('#fac_hum').val() == 'economics'){
+                    $('#overview').show();
+                    retrieve_cudi(8,0)
+                    retrieve_fak(0,0)
+                  } else if ($('#fac_hum').val() == 'philosophy'){
+                    $('#overview').show();
+                    retrieve_cudi(12,0)
+                    retrieve_fak(8,0)
+                    
+                  } else if ($('#fac_hum').val() == 'law'){
+                    $('#overview').show();
+                    retrieve_cudi(7,0)
+                    retrieve_fak(5,0)
+                  } else if ($('#fac_hum').val() == 'social'){
+                    $('#overview').show();
+                    retrieve_cudi(13,0)
+                    retrieve_fak(6,0)
+                  } else if ($('#fac_hum').val() == 'psychology'){
+                    $('#overview').show();
+                    retrieve_cudi(6,0)
+                    retrieve_fak(10,0)
+                  }
+        
+                }
+        
+            else if ($('#fac_hum').val() == 'arts'){
+              $('#degrees_arts').show();
+            };
+    
+          }).trigger('change');
+        }
+
+            else if( $('#group').val() == 'science') {
+              $('#faculties_science').show();
+              
+              $('#faculties_humanities').hide();
+              $('#faculty_biomedical').hide();
+              $('#degrees_arts').hide()
+            }
+        
+            else if( $('#group').val() == 'biomedical') {
+              $('#faculty_biomedical').show();
+              
+              $('#faculties_humanities').hide();
+              $('#faculties_science').hide();
+        
+              $('#degrees_arts').hide();
+            }
+        
+          }).trigger('change');
+        
+        });
+
+        //test if addmarker functions work: successful
+        /*addFaktoMap(50.8772801, 4.6982853)
+        addCuditoMap(50.8742119, 4.7050093)*/
 
         // Try HTML5 geolocation; code based on Google documentation
         if (navigator.geolocation) {
@@ -103,161 +269,3 @@ var map, infoWindow;
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map,marker);
       };
-
-
-//reference to fakbar_new.xml
-function retrieve_fak(o, p){
-
-  var xhttp = new XMLHttpRequest();
-
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        FakFunction(this, o, p);
-    };
-};
-
-xhttp.open("GET", "fakbar_new.xml", true);
-xhttp.send();
-
-}
-
-
-//reference to cudi.xml
-function retrieve_cudi(o, p){
-
-  var xhttp_ = new XMLHttpRequest();
-
-  xhttp_.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        CudiFunction(this, o, p);
-      };
-  };
-
-  xhttp_.open("GET", "cudi.xml", true);
-  xhttp_.send();
-  }
-
-
-//function to retrieve fakbar
-function FakFunction(xml, i, j) {
-  // console.log(xml.responseText);
-    var xmlDoc = xml.responseXML;
-    
-    var fakbarname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
-
-    coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
-    coordinates = coordinates.split(",");
-    //console.log(coordinates);
-    fak_lat = coordinates[0]
-    fak_lng = coordinates[1]
-    //console.log(fakbarname, fak_lat,fak_lng)
-
-    //addFaktoMap(fak_lat,fak_lng)
-
-
-    document.getElementById("fakbar_from_xml").innerHTML = 
-    xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
-    + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
-
-    return [fak_lat,fak_lng]
-};
-
-
-//function to retrieve cudi
-function CudiFunction(xml, i, j) {
-
-  // console.log(xml.responseText);
-  var xmlDoc = xml.responseXML;
-
-  var cudiname = xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue;
-
-  coordinates = xmlDoc.getElementsByTagName("coordinates")[i].childNodes[j].nodeValue;
-  coordinates = coordinates.split(",");
-  //console.log(coordinates);
-  cudi_lat = coordinates[0];
-  cudi_lng = coordinates[1];
-  //console.log(cudiname, cudi_lat,cudi_lng)
-
-  //addCuditoMap(cudi_lat,cudi_lng)
-    
-  document.getElementById("cudi_from_xml").innerHTML = 
-  xmlDoc.getElementsByTagName("name")[i].childNodes[j].nodeValue + ": " 
-  + xmlDoc.getElementsByTagName("description")[i].childNodes[j].nodeValue;
-
-  cudi_coor = [cudi_lat,cudi_lng];
-  console.log(cudi_coor);
-  return cudi_coor;
-
-};
-
-retrieve_cudi(8,0)
-//console.log(retrieve_cudi(8,0))
-
-retrieve_fak(0,0)
-
-//construct interactive dropdown menus
-//http://jsfiddle.net/VLQKw/1/ used as a reference for conditional dropdown menus
-$(document).ready(function() {
-
-  $('#group').bind('change', function (e) { 
-    //console.log("change");
-
-    $('#overview').hide()
-
-    if ($('#group').val() == 'empty'){
-      $('#faculty_biomedical').hide();      
-      $('#faculties_humanities').hide();
-      $('#faculties_science').hide();
-      $('#degrees_arts').hide();
-    }
-
-    else if($('#group').val() == 'humanities') {     
-      $('#faculties_science').hide();
-      $('#faculty_biomedical').hide();
-
-      $('#faculties_humanities').show();
-
-      $('#fac_hum').bind('change', function (e){
-        if ($('#fac_hum').val() != 'arts'){
-          $('#degrees_arts').hide();
-
-          if ($('#fac_hum').val() == 'economics'){
-            $('#overview').show();
-
-          };
-
-        }
-
-        else if ($('#fac_hum').val() == 'arts'){
-          $('#degrees_arts').show();
-        };
-
-      }).trigger('change');
-    }
-
-    else if( $('#group').val() == 'science') {
-      $('#faculties_science').show();
-      
-      $('#faculties_humanities').hide();
-      $('#faculty_biomedical').hide();
-      $('#degrees_arts').hide()
-    }
-
-    else if( $('#group').val() == 'biomedical') {
-      $('#faculty_biomedical').show();
-      
-      $('#faculties_humanities').hide();
-      $('#faculties_science').hide();
-
-      $('#degrees_arts').hide();
-    }
-
-  }).trigger('change');
-
-});
-
-
-
-
-
-
