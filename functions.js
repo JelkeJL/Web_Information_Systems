@@ -278,10 +278,11 @@ var map, infoWindow;
                     //retrieve_fak(8,0)
                     retrieve_refresh(8,12)
                     
-                  } else if ($('#fac_hum').val() == "canon"){
-                    document.getElementById("cudi_from_xml").innerHTML = "Our dataset does not contain any information on canon law course services. However, check https://katechetika.be/student for more information"
-                    document.getElementById("fakbar_from_xml").innerHTML = "Our dataset does not contain any information on canon law fakbars. However, check https://katechetika.be/student for more information"
-
+                  } else if ($('#fac_hum').val() == 'canon'){
+                    $('#overview').show();
+                    refresh()
+                    document.getElementById("cudi_from_xml").innerHTML = "Our dataset does not contain any information on canon law course services. However, check https://katechetika.be/student for more information";
+                    document.getElementById("fakbar_from_xml").innerHTML = "Our dataset does not contain any information on canon law fakbars. However, check https://katechetika.be/student for more information";
 
                   } else if ($('#fac_hum').val() == 'theology'){
                     $('#overview').show();
