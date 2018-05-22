@@ -318,7 +318,7 @@ var map, infoWindow;
                     } else if ($('#degree').val() == 'literature'){
                       //retrieve_fak(3,0)
                       //retrieve_cudi(1,0)
-                      retrieve_refresh(3,1)
+                      retrieve_refresh(3,0)
                       $('#overview').show();
                     } else {
                       //retrieve_fak(3,0)
